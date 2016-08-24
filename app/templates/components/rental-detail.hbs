@@ -1,8 +1,12 @@
-Located in {{rental.city.name}}, this {{rental.bedrooms}} bedrrom {{rental.type}} is availabe by arragememnt through {{rental.owner}}.
+Located in {{rental.city.name}}, this {{rental.bedrooms}} bedroom {{rental.type}} is availabe by arragememnt through {{rental.owner}}.
 <br>
 <p>
   <img src={{rental.image}} alt={{rental.type}}>
 </p>
+<div>
+  <h3>Map of {{rental.owner}}'s {{rental.type}}</h3>
+  {{google-map rental=rental}}
+</div>
 <button {{action 'delete' rental}}>Delete</button>
 <br>
 {{#link-to 'index'}}Home{{/link-to}}
